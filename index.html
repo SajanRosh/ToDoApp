@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="./node_modules/sortablejs/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="text-center text-white bg-black py-3 font-light">
+        If you'have got tasks, start managing today
+    </div>
+    <div class="mt-16 mx-auto w-[360px]">
+        <h1 class="text-xl text-blue-600 font-bold">Manage your task <span class="text-neutral-500">@sajan</span></h1>
+        <h1 class="text-neutral-600">Add your tasks and start organizing them quickly</h1>    
+    </div>
+
+    <div class="mt-8 mx-auto w-[360px] hidden" id="addTaskContainer">
+        <div class="flex gap-2">
+            <input id="task" class="w-[87%] p-3 rounded-lg border mb-2 focus:outline-none focus:ring-4 focus:ring-blue-100 focus:border-blue-600" type="text" placeholder="e.g. Learn Javascript">
+            <input id="dueDate" class="w-[13%] p-3 rounded-lg border mb-2 focus:outline-none focus:ring-4 focus:ring-blue-100 focus:border-blue-600" type="datetime-local">
+        </div>  
+        <button id="addTask" class="bg-black text-white px-5 py-3 text-sm font-light rounded-lg">Add Task</button>
+    </div>
+    <div class="w-[360px] mx-auto mt-5" id="todosContainer">
+    </div>
+    <button @click="modalOpen=true" id="addTaskButton"  class="fixed bottom-10 w-10 h-10 rounded-full right-10 bg-black text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus mx-[8px]" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+      </svg></button>
+
+  <script src="./src/app.js"></script>
+</body>
+</html>
